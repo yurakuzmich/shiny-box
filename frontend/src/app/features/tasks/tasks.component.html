@@ -1,0 +1,4 @@
+<app-create-task-form (taskCreated)="onTaskCreate($event)"></app-create-task-form>
+<div class="tasks-list">
+  <app-task *ngFor="let task of tasks" [task]="task" (taskDeleted)="onTaskDeleted($event)"></app-task>
+</div>

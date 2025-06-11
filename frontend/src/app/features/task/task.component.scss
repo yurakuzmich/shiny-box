@@ -1,0 +1,110 @@
+:host {
+  display: block;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: #9ce171;
+  width: 100%;
+  position: relative;
+
+  &.todo {
+    background-color: #db5050;
+  }
+
+  &.in-progress {
+    background-color: #3482f1;
+  }
+
+  &.done {
+    background-color: #57ea52;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button {
+  padding: 5px;
+}
+
+h2 {
+  margin: 0;
+}
+
+.task-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  &_description {
+    flex: 1;
+  }
+}
+
+.task-edit,
+.task-delete {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  padding: 15px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+
+  &:hover {
+    opacity: 0.5;
+    width: 22px;
+    height: 22px;
+    transition: opacity 0.05s ease;
+    transition: width 0.05s ease, height 0.05s ease;
+  }
+}
+
+.task-edit {
+  right: 23px;
+  background-color: #0c67e5;
+
+  @media screen and (max-width: 768px) {
+    right: 43px;
+    top: 5px;
+  }
+}
+
+.task-delete {
+  right: -13px;
+  background-color: #ff0000;
+
+  @media screen and (max-width: 768px) {
+    right: 5px;
+    top: 5px;
+  }
+}
+
+.error-message {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 3px;
+  color: #ff0000;
+  font-size: 12px;
+}
+

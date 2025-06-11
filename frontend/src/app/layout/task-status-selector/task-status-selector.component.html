@@ -1,0 +1,3 @@
+<select [(ngModel)]="selectedStatus" (ngModelChange)="onStatusChange()" class="status-select">
+  <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+</select>

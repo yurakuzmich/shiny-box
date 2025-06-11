@@ -1,0 +1,37 @@
+<h2>{{ task.title }}</h2>
+
+<div class="task-body">
+  <p class="task-body_description">{{ task.description }}</p>
+  <app-task-status-selector [currentStatus]="task.status" (statusChange)="onStatusChange($event)"></app-task-status-selector>
+  <p>{{ task.dueDate }}</p>
+</div>
+
+<form class="task-edit-form" *ngIf="isEditMode" [formGroup]="editForm" (ngSubmit)="onTaskEditSave()">
+  <input type="text" formControlName="title" placeholder="Title" />
+  <div *ngIf="title?.invalid && (title?.dirty || title?.touched)" class="error-message">
+    <div *ngIf="title?.errors?.['required']">Title is required</div>
+    <div *ngIf="title?.errors?.['minlength']">Title must be at least 3 characters long</div>
+  </div>
+
+  <input type="text" formControlName="description" placeholder="Description" />
+  <div *ngIf="description?.invalid && (description?.dirty || description?.touched)" class="error-message">
+    <div *ngIf="description?.errors?.['required']">Description is required</div>
+    <div *ngIf="description?.errors?.['minlength']">Description must be at least 10 characters long</div>
+  </div>
+
+  <input type="date" formControlName="dueDate" />
+  <div *ngIf="dueDate?.invalid && (dueDate?.dirty || dueDate?.touched)" class="error-message">
+    <div *ngIf="dueDate?.errors?.['required']">Due date is required</div>
+  </div>
+
+  <button type="submit" [disabled]="editForm.invalid">Save</button>
+</form>
+
+
+<div class="task-edit" (click)="onTaskEdit()">
+  E
+</div>
+
+<div class="task-delete" (click)="onTaskDelete()">
+  X
+</div>
