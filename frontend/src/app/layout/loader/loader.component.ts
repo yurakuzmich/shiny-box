@@ -23,6 +23,7 @@ import { LoaderService } from '../../services/loader.service';
       justify-content: center;
       align-items: center;
       z-index: 9999;
+      pointer-events: auto;
     }
 
     .loader {
@@ -34,6 +35,7 @@ import { LoaderService } from '../../services/loader.service';
       display: inline-block;
       box-sizing: border-box;
       animation: rotation 1s linear infinite;
+      z-index: 10000;
     }
 
     @keyframes rotation {

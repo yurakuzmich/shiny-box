@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "id": "326cd83a-9ec9-4845-9061-6ffaf653b5d6",
+    "title": "Second Task",
+    "description": "The second task description",
+    "status": "Done",
+    "dueDate": "2025-06-15T07:25:35.057Z"
+  },
+  {
+    "id": "e51f8c01-3f58-465a-a2c1-934d64fd37b5",
+    "title": "Second Task",
+    "description": "The second task description",
+    "status": "Done",
+    "dueDate": "2025-06-15T07:25:35.057Z"
+  }
+]
